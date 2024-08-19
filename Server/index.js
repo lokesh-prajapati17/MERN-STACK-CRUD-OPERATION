@@ -12,7 +12,7 @@ app.use(express.json());
 
 // Enable CORS for localhost:3000
 app.use(cors({
-  origin: 'http://localhost:3001', // Allow requests from this origin
+  origin: 'http://localhost:3000', // Allow requests from this origin
 }));
 
 // Use routes

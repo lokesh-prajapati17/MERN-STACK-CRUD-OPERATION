@@ -14,11 +14,15 @@ exports.getData = async (req, res) => {
     return res.status(500).json(error);
   }
 };
-
+// Function to get unique data from the database
 exports.getDataById = async (req, res) => {
   try {
     const _id = req.params.id;
+
+    // Retrieve document from the collection
     const data = await crudSchema.findById({ _id });
+
+    // Send the retrieved data back to the client with a 200 status code
     return res.status(200).json(data);
   } catch (error) {
     // Log the error and send a 500 status code if there is an error
